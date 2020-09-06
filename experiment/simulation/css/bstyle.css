@@ -1,0 +1,130 @@
+.desktop-nav .nav li a, .desktop-nav .nav>li>a {
+    padding: 12px 0px;
+    margin: 5px 10px;
+}
+
+.active-nav{
+    border-bottom: solid 3px;
+}
+
+.divider{
+    margin-top: -2%;
+}
+
+
+.mobile-nav .navbar-header{
+    font-size: 0.6em;
+}
+
+.navbar a {
+    color : #fff;
+    padding: 0.5em;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+    margin-left: 95px;
+}
+
+.mobile-nav  .navbar-nav{
+    margin-left: -15% !important;
+    margin-right: 1% !important;
+}
+
+.navbar-nav>li>a {
+    line-height: 5px;
+}
+
+.desk-nav .glyphicon{
+    top :10px;
+    right: 10px;
+}
+
+.mobile-nav .glyphicon-home{
+    /*margin-right: 10%;*/
+}
+
+.logo{
+    padding-left:0.5%;
+    /*padding-top: 5%*/
+}
+
+.logo img{
+    width: 21%;
+    height: 21%;
+    cursor: pointer;
+}
+
+.icons{
+    padding-right: 30%;
+    padding-top: 0.5%
+}
+
+.icons img{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-default {
+    height: 80px;
+    padding-top: 15px;
+    padding-left: 45px;
+    font-size: 1.7em;
+    font-family: 'Actor', sans-serif;
+    background: #a4214b;
+    border-color: #e7dcdd;
+}
+
+.navbar-default1 .navbar-brand1{
+    padding-left: 300px;
+    font-weight: bold;
+    text-align: center;
+    animation-name: moveToLeft;
+    animation-duration: 10s;
+}
+@keyframes moveToLeft{
+    0%{
+        transform:translateX(150px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+
+.navbar-default1 {
+    height: 120px;
+    padding-top: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: 2.0em;
+    font-family: 'Actor', sans-serif;
+    background: #100607;
+    border-color: darkslategray;
+    color: #ffffff;
+}
+
+
+.navbar-default .navbar-brand {
+    font-size: 1.4em;
+    font-family: 'Actor', sans-serif;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a:hover{
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a{ /*.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {*/
+    color: #fff;
+    background: #a4214b;
+}
+
+@media (max-width: 480px) {
+    .manual-section-description {
+        padding: 0em 0em 0em 0em;
+        margin: 0em 0em 0em 0em;
+    }
+}

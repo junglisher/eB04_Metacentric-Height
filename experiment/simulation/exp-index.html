@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <title>Mechanical Lab</title>
+    <!-- <link href="../normalize.css" rel="stylesheet" type="text/css"/> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen" rel="stylesheet"/>
+    <link href="../bootstrap-3.1.1-dist/bootstrap.min.css" media="screen" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet" type="text/css"/>
+    <link href="../bstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="../fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="../overlay.css" rel="stylesheet" type="text/css"/> <!--style for overlay color changer,
+  will be removed in production-->
+    <script src="../colorchanger.js" type="text/javascript"></script> <!--script for overlay color changer-->
+    <!--   &lt;link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'&gt;
+      &lt;link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'&gt; -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]&gt;
+      &lt;script src="../../assets/js/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="../../assets/js/respond.min.js"&gt;&lt;/script&gt;
+      &lt;![endif]-->
+    <style type="text/css">
+        body{
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+
+<nav class="navbar navbar-default visible-lg" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Metacentric Height of a Floating body</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+        <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation/index.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+        <a href="index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+    </div><!-- /.navbar-collapse -->
+</nav>
+<div class="col-sm-12">
+    <a href="index.html"><span class="glyphicon glyphicon-home pull-right" id="home"></span></a>
+</div>
+<div class="hidden-lg">
+    <nav class="navbar navbar-default mobile-nav" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mechanical Lab</a>
+        </div>
+        <div class="nav navbar-nav pull-right">
+            <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+    </nav>
+    <p class="experiment-mobile-title"> Metacentric Height of a Floating body</p>
+</div>
+
+<div class="colorchanger">
+    <button class="btn btn-primary" id="color1" onclick="colorChange('#0ba4a1','#d2efe4');" type="button"></button>
+    <button class="btn btn-primary" id="color2" onclick="colorChange('#cab726','#eef3b0');" type="button"></button>
+    <button class="btn btn-primary" id="color3" onclick="colorChange('#7ea44d','#cde9b7');" type="button"></button>
+    <button class="btn btn-primary" id="color4" onclick="colorChange('#a4214b','#efd7d3');" type="button"></button>
+</div>
+
+<div class="row">
+    <div class="col-lg-2 visible-lg lab-index">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#intro">Introduction</a></li>
+            <li><a href="#theory">Theory</a></li>
+            <li><a href="#obj">Objective</a></li>
+            <li><a href="#man">Procedure</a></li>
+            <li><a href="#proc">Observation</a></li>
+            <li><a href="#further-reading">Further Reading</a></li>
+        </ul>
+    </div>
+
+    <div class="col-lg-10 lab-manual">
+        <div class="manual-section" id="intro">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/intro.png"/></a>Introduction</p><hr/>
+            <div class="manual-section-description">
+                <p>
+                 The metacentric height (GM) is calculated as the distance between the center of gravity(G) of a floating body and its metacenter(M). It is the measure of the static stability of the floating body.
+GM = BM - BG
+
+                </p>
+            </div>
+        </div>
+
+        <div class="manual-section" id="theory">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/theory.png"></a>Theory</p><hr/>
+            <div class="manual-section-description">
+                <p>
+                 A point about which a floating body tries to oscillate is called the metacenter of that body. The distance between the metacenter (M) and the center of gravity (G) of the floating body is known as metacentric height (GM).
+When a small angular displacement is given to a body floating in a liquid, it starts oscillation about some point M. This point about which the body starts oscillating is called the metacenter.</p>
+<p> The following formula is used for the calculation of the Metacentric height of a floating body:</p>
+               <center><p><strong>GM = (w1.Y)/(W + w1). tan θ</strong></p></center>
+<p>Metacenter (M) may be defined as the point of intersection of the axis of the body passing through the center of gravity (G) and original center of buoyancy (B) and a vertical line passing through the new center of buoyancy (B) of the titled position of the body.
+Buoyancy is the tendency of the fluid to lift a submerged body. The resultant upward force or thrust exerted by a fluid on the submerged body is known as Force of Buoyancy. According to Archimedes Principle, FB = weight of the volume of liquid displaced by the
+body.
+The Center of Gravity(G) is the point where is the weight of the body is acting.
+The Center of Buoyancy (B) is the point to which the force of Buoyancy is acting. The Center of Buoyancy is the center of gravity of the volume of liquid displaced by the body.</p><br/>
+<center> <img height="185px"src="Description.png" width="279px"/><br/></center>
+                <p>
+                  The relation between the center of gravity and metacenter in different three types of equilibrium:</p>
+<ol type="a">
+<li><strong>Neutral equilibrium</strong>
+<p>If GM = 0 (M coinciding with G) </p></li>
+<li><strong>Stable equilibrium</strong>
+<p>If GM > 0 (M is above G) </p></li>
+<li><strong>Unstable equilibrium</strong>
+<p>If GM < 0 (M is below G) </p></li>
+</ol>
+<center><img height="185px" src="stable.png" width="279px"/><br/></center>
+            </div>
+        </div>
+        <div class="manual-section" id="obj">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/obj.png"/></a>Objective</p><hr/>
+            <div class="manual-section-description">
+                <p>
+                </p>
+
+                To calculate the Metacentric height of a floating body.
+                <p></p>
+            </div>
+        </div>
+
+
+        <div class="manual-section" id="proc">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/proc.png"/></a>Procedure</p><hr/>
+            <div class="manual-section-description">
+                <p>
+                 The procedure to find the metacentric height of a floating body is as follows:
+                </p>
+                <p>
+                </p><ol>
+                <li> Take an empty tank and fill it with water up, the height of the water level is (Z1).  </li>
+                <li> Now place the floating body having weight W in the tank,the water level rises upto Z2.  </li>
+                <li> Adjust the floating ship.</li>
+                <li> After adjusting, add load of weight (w) to the horizontal beam of the floating body at centre of the beam.</li>
+                <li>  Now displaced the load at a known distance Y from the centre of the beam.</li>
+                <li> Now the floating body will tilt at some angle on one side and observe the tilt angle. </li>
+                <li> Finally, calculate the metacentric height using the given formula:</li>
+                <strong> Metacentric Height (GM) = (w*Y)/((W+w)*tan(θ)</strong>
+
+            </ol>
+
+                <p></p>
+            </div>
+        </div>
+<div class="manual-section" id="man">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/sim.png"/></a>Observations</p><hr/>
+            <div class="manual-section-description">
+                <p>
+                <li>  Weight of floating body = W</li>
+<li>Additional weight added on the horizontal beam of the floating body = w1</li>
+<li>The distance of w1 from the center = Y</li>
+<li>Tilt angle = θ</li>
+
+                </p>
+            </div>
+        </div>
+        <div class="manual-section" id="further-reading">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/ref.png"/></a>Further Reading</p><hr/>
+            <div class="manual-section-description">
+                <ol>
+                    <li><a href="http://en.wikipedia.org/wiki/Metacentric_Height"> http://en.wikipedia.org/wiki/Metacentric_Height </a></li>
+                    <li><a href="https://www.wartsila.com/encyclopedia/term/metacentric-height"> https://www.wartsila.com/encyclopedia/term/metacentric-height </a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+</body></html>
