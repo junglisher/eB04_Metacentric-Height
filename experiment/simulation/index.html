@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- Bootstrap -->
+    <!-- <link href="q	bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen" rel="stylesheet"/> -->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- &lt;link rel="stylesheet" type="text/css" href="../../bstyle.css"&gt; -->
+    <!-- &lt;link rel="stylesheet" type="text/css" href="../../fonts.css"&gt; -->
+    <link href="css/metacentric-height.css" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css"/>
+    <script src="js/metacentric-height.js"></script>
+    <title>Mechanical Lab</title>
+</head>
+
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+<div id="header"> Simulator <br/> Metacentric Height(floating object)</div>
+<a href="exp-index.html"><div class="vlabsIcon"></div></a>
+<div class="inputDivision">
+    <div class="FirstInputBlock">
+        <div class="theoryStatementDivisionTitle"><div class="theoryPic"></div><div class="experimentText">Instructions</div></div>
+        <div class="inputDivisionBody" id="inputDivisionSimpleLoop">
+            <p></p><br/>
+            <p class="warningText">1. The slider here represents the number line referring to the distance of the object from the center in mm i.e for moving the object on the left -side, slide the slider to the direction of the negative numbers, and vice-versa.</p><br/>
+			<p class="warningText">2. The slider at first is at the 0mm from the center i.e. it is not moved to any distance.</p><br/>
+            <p class="warningText">3.  You can slide the slider either to left or in the right direction.</p><br/>
+            <p class="warningText">4. Each click on the slider represents the movement of the object from the center by 10mm i.e first click will move the object to 10mm, the second click will move it to 20mm, and so on.</p><br/>
+			<p class="warningText">5. The weight of the floating object is already calculated by using the formula W = V*Density of water, where V is the volume of water(V = Z*A) displaced from the tank due to the floating object. The Z is calculated as Z2-Z1.
+</p><br/>
+			<p class="warningText">6. The weight added to the floating body is fixed at 0.3056kg.
+</p><br/>
+			<p class="warningText">7. At each change of distance of the object, the tilt angle(θ) is calculated.</p><br/>
+
+        </div><!-- end of inputDivisionSimpleLoop -->
+    </div><!-- end of FirstInputBlock -->
+    <div class="SecondInputBlock">
+        <div class="inputDivisionTitle"><div class="experimentPic"></div><div class="experimentText">Initialize</div></div>
+        <div class="inputDivisionBody" id="inputDivisionSimpleLoop">
+            <div class="variableText">Initialize variables</div>
+            <input class="inputField" id="valueA" value="Value of total weight of floating object = 1.5 Kg " size="10" type="text"/>
+            <input class="inputField" id="valueB" value="Value of weight of load = 0.3056 Kg" size="10" type="text"/>
+            <label class="inputField" size="10" type="text"> Value of displacement in load (use range slider given below, in mm) :</label>
+            <input class="inputField" id="valueD" min="-80" max="80" value="0" step="10" size="10" type="range"/>
+            <button class="button startButton" id="okBtnId">OK</button>
+            <button class="buttonDisable myStartButton" disabled="" id="startBtnId">Start</button><button class="buttonDisable myStartButton hide" disabled="" id="stopBtnId">Stop</button>
+            <button class="buttonDisable nextButton" disabled="" id="nextBtnId">Next</button>
+        </div><!-- end of inputDivisionSimpleLoop -->
+    </div><!-- end of SecondInputBlock -->
+</div><!-- end of inputDivision -->
+<div class="executionDivision">
+    <div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
+    <div class="stepExecutionDisplay">
+        <div class="programCode" id="NumApproCode">
+            <div id="NumApproCodeContent1">1. Take an empty tank and fill it with water up, the height of the water level is (Z1).</div>
+            <div id="NumApproCodeContent2">2. Now place the floating body having weight W in the tank,the water level rises upto Z2. </div>
+            <div id="NumApproCodeContent3">3. Adjust the floating ship.</div>
+            <div id="NumApproCodeContent4">4. After adjusting, add load of weight (w) to the horizontal beam of the floating body at centre of the beam.</div>
+            <div id="NumApproCodeContent5">5. Now displaced the load at a known distance Y from the centre of the beam. </div>
+            <div id="NumApproCodeContent6">6. Now the floating body will tilt at some angle on one side and observe the tilt angle.</div>
+            <div id="NumApproCodeContent7">7. Finally, calculate the metacentric height using the given formula.</div>
+            <div id="NumApproCodeContent8">Metacentric Height = (w*Y)/((W+w)*tan(θ) </div>
+            <div id="NumApproCodeContent9">where,</div>
+            <div id="NumApproCodeContent10">Weight of floating body = W <br/>
+                Additional weight added on the horizontal beam of the floating body = w <br/>
+                The distance of w from the center = Y<br/>
+                Tilt angle = θ
+                <br/>
+            </div>
+        </div><!-- end of programCode -->
+    </div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+<div class="outputDivision">
+    <div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Result Visualization</div></div>
+    <div class="resultDisplay" id="resultDisplay">
+        <div class="graph">
+            <canvas class="canvas" height="300" id="myCanvas" width="420">Your browser does not support the HTML5 canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var grad = c.getContext("2d");
+                // // var c = document.getElementById("myCanvas");
+                // var ctx = c.getContext("2d");
+                var grd = grad.createLinearGradient(400,150,400,300);
+                grd.addColorStop(0,"white");
+                grd.addColorStop(1,"blue");
+                //  ctx.font = "10px Arial";
+                //  ctx.fillText("Hello World",20,50);
+                // ctx.fillStyle = grd;
+                // ctx.fillRect(0,0,500,100);
+
+
+                grad.fillStyle = grd;
+                grad.fillRect(0,0,400,300);
+                var canvas = document.getElementById("myCanvas");
+                var body = canvas.getContext("2d");
+                body.fillStyle = "#e0c200";
+                body.fillRect(100,80,200,150);
+                var xmass = canvas.getContext("2d");
+                xmass.fillStyle = "#FF0000";
+                xmass.fillRect(170,40,60,40);
+
+                var ctxt = canvas.getContext("2d");
+                ctxt.font = "20px Arial";
+                ctxt.fillText("W",180,40);
+                ctxt.fillText("M",180,100);
+                ctxt.fillText("G",180,145);
+                ctxt.fillText("B",180,185);
+                ctxt.fillText("K",180,230);
+                ctxt.fillStyle = "#000000";
+
+                var cline = canvas.getContext("2d");
+                cline.moveTo(200,20);
+                cline.lineTo(200,250);
+                cline.stroke();
+
+                var cc = canvas.getContext("2d");
+                cc.beginPath();
+                cc.arc(200,50,2,0,2*Math.PI);
+                cc.arc(200,100,2,0,2*Math.PI);
+                cc.arc(200,145,2,0,2*Math.PI);
+                cc.arc(200,185,2,0,2*Math.PI);
+                cc.arc(200,230,2,0,2*Math.PI);
+                cc.fillstyle = "black" ;
+                cc.stroke();
+
+
+            </script>
+        </div><!-- end of FirstInputBlock -->
+        <div class="gapBitweenMeamoryGap"></div>
+        <!-- <div class="textAlignLeft" id="resultShowDiv">
+            <div class="marginLeft">
+                <span>LOCAL VARIABLES :</span>  <span id="vari"></span><span id="valuei"></span>  <span id="varsum"></span><span id="valuesum"></span>
+            </div>
+            <div class="marginLeft">
+                <span>OUTPUT :</span>  <span id="integrText"></span><span id="integrValue"></span>
+            </div>
+        </div> -->
+    </div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+
+
+
+
+
+</body></html>
