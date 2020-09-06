@@ -191,7 +191,7 @@ window.view ={
     restoreCanvas: function () {
         this.canvasContext.clearRect(0, 0, this.canvas.width, this.canvas.height); // to clear previously drawed canvas.
         this.canvasContext.restore(); // restore canvas it's initial state.
-        this.drawCanvas(); // redraw graph on canvas.
+        // this.drawCanvas(); // redraw graph on canvas.
     }, //todo change
 
     // startExperiment: work to start code execution.
